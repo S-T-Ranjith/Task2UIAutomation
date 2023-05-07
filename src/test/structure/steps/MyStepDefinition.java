@@ -14,17 +14,17 @@ public class MyStepDefinition {
     }
 
     @Then("User scroll down to {string}")
-    public void userScrollDownTo(String apiName) throws Exception {
+    public void userScrollDownTo(String apiName) {
         webActions.scrollToElement(apiName);
     }
 
     @And("User click the {string} endpoint")
-    public void userClickTheEndpoint(String endPoint) throws Exception {
+    public void userClickTheEndpoint(String endPoint)  {
         webActions.clickButtonWebByXpath(endPoint);
     }
 
     @And("User verifies the {string} request data is {string}")
-    public void userVerifiesTheRequestDataIs(String apiName, String availability) throws Exception {
+    public void userVerifiesTheRequestDataIs(String apiName, String availability)  {
         webActions.verifySampleRequestData(apiName, availability);
     }
 

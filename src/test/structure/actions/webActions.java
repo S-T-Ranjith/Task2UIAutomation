@@ -19,9 +19,9 @@ public class webActions {
      * Method to click element by xpath
      * @param buttonType name
      */
-    public static void clickButtonWebByXpath(String buttonType) {
+    public static void clickButtonWebByXpath(String endPoint) {
         try {
-            switch (buttonType) {
+            switch (endPoint) {
                 case "SINGLE_USER" -> findElementByXpathAndClick(webObjects.singleUsers);
                 case "LIST_USER" -> findElementByXpathAndClick(webObjects.listUser);
                 case "SINGLE_USER_NOT_FOUND" -> findElementByXpathAndClick(webObjects.singleUserNotFound);
@@ -29,7 +29,7 @@ public class webActions {
                 case "REGISTER_USER" -> findElementByXpathAndClick(webObjects.registerUser);
                 case "UPDATE_USER" -> findElementByXpathAndClick(webObjects.updateUser);
                 default ->
-                        throw new AssertionError("No Button with name ---" + buttonType + "------- Exist in in this page");
+                        throw new AssertionError("No end point with name ---" + endPoint + "------- Exist in in this page");
             }
             Thread.sleep(1000);
         } catch (Exception e) {
